@@ -1,0 +1,62 @@
+2016-08-03 18:43:29 driver.py[line:39] INFO app启动成功!
+2016-08-03 18:43:31 buildcase.py[line:47] INFO ==========开始执行测试用例test1_Login_01===========
+2016-08-03 18:43:31 base.py[line:274] INFO 获取activity:MainActivity,element_name:我,元素信息:
+2016-08-03 18:43:31 base.py[line:275] INFO {'pathvalue': 'tab3', 'type': 'View', 'name': u'\u6211', 'pathtype': 'id'}
+2016-08-03 18:43:31 base.py[line:74] INFO 开始定位元素
+2016-08-03 18:43:33 base.py[line:91] INFO id定位成功
+2016-08-03 18:43:34 buildcase.py[line:136] INFO 结束click动作
+2016-08-03 18:43:35 buildcase.py[line:146] INFO 预期页面中存在<+86   中国>元素
+2016-08-03 18:43:35 buildcase.py[line:39] INFO 测试结果写入完成!<test1_Login_01:pass>
+2016-08-03 18:43:35 buildcase.py[line:185] INFO ==========测试用执行完成test1_Login_01===========
+
+2016-08-03 18:43:35 buildcase.py[line:47] INFO ==========开始执行测试用例test1_Login_02===========
+2016-08-03 18:43:35 base.py[line:274] INFO 获取activity:login.LoginFirstActivity,element_name:手机号,元素信息:
+2016-08-03 18:43:35 base.py[line:275] INFO {'pathvalue': 'et_number_input', 'type': 'EditText', 'name': u'\u586b\u5199\u4f60\u7684\u624b\u673a\u53f7', 'pathtype': 'id'}
+2016-08-03 18:43:35 base.py[line:74] INFO 开始定位元素
+2016-08-03 18:43:35 base.py[line:91] INFO id定位成功
+2016-08-03 18:43:42 buildcase.py[line:136] INFO 结束sendkey动作
+2016-08-03 18:43:43 buildcase.py[line:146] INFO 预期页面中存在<15811367175>元素
+2016-08-03 18:43:43 buildcase.py[line:39] INFO 测试结果写入完成!<test1_Login_02:pass>
+2016-08-03 18:43:43 buildcase.py[line:185] INFO ==========测试用执行完成test1_Login_02===========
+
+2016-08-03 18:43:43 buildcase.py[line:47] INFO ==========开始执行测试用例test1_Login_03===========
+2016-08-03 18:43:43 base.py[line:274] INFO 获取activity:login.LoginFirstActivity,element_name:下一步,元素信息:
+2016-08-03 18:43:43 base.py[line:275] INFO {'pathvalue': 'bt_login_next', 'type': 'Button', 'name': u'\u4e0b\u4e00\u6b65', 'pathtype': 'id'}
+2016-08-03 18:43:43 base.py[line:74] INFO 开始定位元素
+2016-08-03 18:43:43 base.py[line:91] INFO id定位成功
+2016-08-03 18:43:44 buildcase.py[line:136] INFO 结束click动作
+2016-08-03 18:43:45 buildcase.py[line:146] INFO 预期页面中存在<请输入您的手机+86>元素
+2016-08-03 18:43:45 buildcase.py[line:39] INFO 测试结果写入完成!<test1_Login_03:pass>
+2016-08-03 18:43:45 buildcase.py[line:185] INFO ==========测试用执行完成test1_Login_03===========
+
+2016-08-03 18:43:45 buildcase.py[line:47] INFO ==========开始执行测试用例test1_Login_04===========
+2016-08-03 18:43:45 base.py[line:274] INFO 获取activity:login.LoginSecondActivity,element_name:验证码,元素信息:
+2016-08-03 18:43:45 base.py[line:275] INFO {'pathvalue': 'et_code', 'type': 'EditText', 'name': u'\u586b\u51995\u4f4d\u9a8c\u8bc1\u7801', 'pathtype': 'id'}
+2016-08-03 18:43:45 base.py[line:74] INFO 开始定位元素
+2016-08-03 18:43:45 base.py[line:91] INFO id定位成功
+2016-08-03 18:43:54 buildcase.py[line:136] INFO 结束sendkey动作
+2016-08-03 18:43:55 buildcase.py[line:146] INFO 预期页面中存在<11111>元素
+2016-08-03 18:43:55 buildcase.py[line:39] INFO 测试结果写入完成!<test1_Login_04:pass>
+2016-08-03 18:43:55 buildcase.py[line:185] INFO ==========测试用执行完成test1_Login_04===========
+
+2016-08-03 18:43:55 buildcase.py[line:47] INFO ==========开始执行测试用例test1_Login_05===========
+2016-08-03 18:43:55 base.py[line:274] INFO 获取activity:login.LoginSecondActivity,element_name:登录,元素信息:
+2016-08-03 18:43:55 base.py[line:275] INFO {'pathvalue': 'bt_login', 'type': 'EditText', 'name': u'\u767b\u5f55', 'pathtype': 'id'}
+2016-08-03 18:43:55 base.py[line:74] INFO 开始定位元素
+2016-08-03 18:43:55 base.py[line:91] INFO id定位成功
+2016-08-03 18:43:55 buildcase.py[line:136] INFO 结束click动作
+2016-08-03 18:43:57 buildcase.py[line:146] INFO 预期页面中存在<推荐>元素
+2016-08-03 18:43:57 buildcase.py[line:39] INFO 测试结果写入完成!<test1_Login_05:pass>
+2016-08-03 18:43:57 buildcase.py[line:185] INFO ==========测试用执行完成test1_Login_05===========
+
+2016-08-03 18:43:57 buildcase.py[line:47] INFO ==========开始执行测试用例test1_Login_06===========
+2016-08-03 18:43:57 base.py[line:274] INFO 获取activity:MainActivity,element_name:我,元素信息:
+2016-08-03 18:43:57 base.py[line:275] INFO {'pathvalue': 'tab3', 'type': 'View', 'name': u'\u6211', 'pathtype': 'id'}
+2016-08-03 18:43:57 base.py[line:74] INFO 开始定位元素
+2016-08-03 18:43:57 base.py[line:91] INFO id定位成功
+2016-08-03 18:43:57 buildcase.py[line:136] INFO 结束click动作
+2016-08-03 18:43:58 buildcase.py[line:146] INFO 预期页面中存在<15811367175>元素
+2016-08-03 18:43:58 buildcase.py[line:39] INFO 测试结果写入完成!<test1_Login_06:pass>
+2016-08-03 18:43:58 buildcase.py[line:185] INFO ==========测试用执行完成test1_Login_06===========
+
+2016-08-03 18:44:00 myunit.py[line:31] INFO app退出成功!

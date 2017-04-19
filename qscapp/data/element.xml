@@ -1,0 +1,2118 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<page>
+
+    <activity name = ".ui.activity.MainActivity"><!--activity名称-->
+
+        <element name="推荐">
+            <name>推荐</name>
+            <type>TextView</type>
+            <pathtype>class</pathtype>
+            <pathvalue>android.widget.TextView</pathvalue>
+			<index>0</index>
+        </element>
+
+        <element name="尝鲜预售">
+            <name>尝鲜预售</name>
+            <type>TextView</type>
+            <pathtype>class</pathtype>
+            <pathvalue>android.widget.TextView</pathvalue>
+			<index>1</index>
+        </element>
+
+        <element name="梦想清单">
+            <name>梦想清单</name>
+            <type>ImageView</type>
+            <pathtype>class</pathtype>
+            <pathvalue>android.widget.TextView</pathvalue>
+			<index>2</index>
+        </element>
+
+        <element name="达人直播">
+            <name>达人直播</name>
+            <type>TextView</type>
+            <pathtype>class</pathtype>
+            <pathvalue>android.widget.TextView</pathvalue>
+			<index>3</index>
+        </element>
+		
+		<element name="TOP_AD">
+            <name>TOP_AD</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/image</pathvalue>
+        </element>
+		
+		<element name="首页">
+            <name>首页</name>
+            <type>View</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/tab0</pathvalue>
+        </element>
+		
+		<element name="动态">
+            <name>动态</name>
+            <type>View</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/tab1</pathvalue>
+        </element>
+		
+		<element name="消息">
+            <name>消息</name>
+            <type>View</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/tab2</pathvalue>
+        </element>
+		
+		<element name="我">
+            <name>我</name>
+            <type>View</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/tab3</pathvalue>
+        </element>
+		
+		<element name="发起">
+            <name>+</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/iv_tab_add</pathvalue>
+        </element>
+		
+		<element name="banner">
+            <name>banner</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/image</pathvalue>
+        </element>
+		
+		<element name="第一个项目">
+            <name>第一个项目</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/tv_title</pathvalue>
+        </element>
+		
+		
+		<element name="头像">
+            <name>头像</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/avatar</pathvalue>
+			<list>yes</list>
+        </element>
+		
+		<element name="筹款项目">
+            <name>筹款项目</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/tv_name</pathvalue>
+			<list>yes</list>
+        </element>
+		
+		<element name="发布日期">
+            <name>发布日期</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/tv_time</pathvalue>
+			<list>yes</list>
+        </element>
+		
+		<element name="筹款标题">
+            <name>筹款标题</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/tv_title</pathvalue>
+			<list>yes</list>
+        </element>
+		
+		<element name="筹款描述">
+            <name>筹款描述</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/tv_description</pathvalue>
+			<list>yes</list>
+        </element>
+		
+		<element name="筹款logo">
+            <name>筹款logo</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/iv_bank_logo</pathvalue>
+			<list>yes</list>
+        </element>
+		
+		<element name="支持次数">
+            <name>支持次数</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/tv_backer_count</pathvalue>
+			<list>yes</list>
+        </element>
+		
+		<element name="已筹">
+            <name>已筹</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/tv_current_amount</pathvalue>
+			<list>yes</list>
+        </element>
+		
+		<element name="进度">
+            <name>进度</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/tv_progress</pathvalue>
+			<list>yes</list>
+        </element>
+		
+		<!--自己验证所需 -->
+		<element name="发起的项目">
+            <name>发起的项目</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/created_count</pathvalue>
+        </element>
+
+        <element name="关注的项目">
+            <name>关注的项目</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/followed_count</pathvalue>
+        </element>
+		
+		<element name="我的头像">
+            <name>我的头像</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/avatar</pathvalue>
+        </element>
+		
+		<element name="添加标签">
+            <name>添加标签</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/iv_add_category</pathvalue>
+        </element>
+		
+    </activity>
+	    
+		
+	<!--登录页first -->
+	<activity name = "login.LoginFirstActivity"><!--activity名称--> 
+	
+		<element name="填写你的手机号提示">
+            <name>+86   中国</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/tv_country_code</pathvalue>
+        </element>
+	
+		<element name="手机号">
+            <name>填写你的手机号</name>
+            <type>EditText</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/et_number_input</pathvalue>
+        </element>
+		
+		<element name="下一步">
+            <name>下一步</name>
+            <type>Button</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/bt_login_next</pathvalue>
+        </element>
+	
+	</activity>
+
+	<!--登录页second -->
+	<activity name = "login.LoginSecondActivity"><!--activity名称--> 
+	
+		<element name="验证码">
+            <name>填写5位验证码</name>
+            <type>EditText</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/et_code</pathvalue>
+        </element>
+	
+		<element name="登录">
+            <name>登录</name>
+            <type>EditText</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/bt_login</pathvalue>
+        </element>
+	
+	</activity>
+	
+	
+	<!--发起项目 -->
+	<activity name = ".ui.activity.project.publish.ProjectPublishActivity"><!--activity名称-->
+	
+		<element name="微爱通道">
+            <name>微爱通道</name>
+            <type>TextView</type>
+            <pathtype>name</pathtype>
+            <pathvalue>微爱通道</pathvalue>
+        </element>
+	
+		<element name="尝鲜预售">
+            <name>尝鲜预售</name>
+            <type>TextView</type>
+            <pathtype>name</pathtype>
+            <pathvalue>尝鲜预售</pathvalue>
+        </element>
+		
+		<element name="实现梦想">
+            <name>实现梦想</name>
+            <type>TextView</type>
+            <pathtype>name</pathtype>
+            <pathvalue>实现梦想</pathvalue>
+        </element>
+		
+		<element name="达人直播">
+            <name>达人直播</name>
+            <type>TextView</type>
+            <pathtype>name</pathtype>
+            <pathvalue>达人直播</pathvalue>
+        </element>
+	
+	</activity>
+	
+	<!--微爱通道 -->
+	<activity name = ".ui.activity.project.publish.ProjectPublishLoveActivity"><!--activity名称-->
+	
+		<element name="微爱通道筹款说明">
+            <name>微爱通道筹款说明</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/title</pathvalue>
+        </element>
+		
+		<element name="我知道了">
+            <name>我知道了</name>
+            <type>Button</type>
+            <pathtype>name</pathtype>
+            <pathvalue>我知道了</pathvalue>
+        </element>
+		
+		<element name="发起项目">
+            <name>发起项目</name>
+            <type>TextView</type>
+            <pathtype>name</pathtype>
+            <pathvalue>发起项目</pathvalue>
+        </element>
+		
+		<element name="大病救助">
+            <name>大病救助</name>
+            <type>TextView</type>
+            <pathtype>name</pathtype>
+            <pathvalue>大病救助</pathvalue>
+        </element>
+		
+		<element name="灾难救助">
+            <name>灾难救助</name>
+            <type>TextView</type>
+            <pathtype>name</pathtype>
+            <pathvalue>灾难救助</pathvalue>
+        </element>
+		
+		<element name="动物保护">
+            <name>动物保护</name>
+            <type>TextView</type>
+            <pathtype>name</pathtype>
+            <pathvalue>动物保护</pathvalue>
+        </element>
+		
+		<element name="扶贫助学">
+            <name>扶贫助学</name>
+            <type>TextView</type>
+            <pathtype>name</pathtype>
+            <pathvalue>扶贫助学</pathvalue>
+        </element>
+		
+		<element name="其它">
+            <name>其它</name>
+            <type>TextView</type>
+            <pathtype>name</pathtype>
+            <pathvalue>其它</pathvalue>
+        </element>
+		
+		<element name="扶贫助学">
+            <name>扶贫助学</name>
+            <type>TextView</type>
+            <pathtype>name</pathtype>
+            <pathvalue>扶贫助学</pathvalue>
+        </element>
+	
+	</activity>
+	
+	<!--发起项目首页 都一样的 -->
+	<activity name = ".ui.activity.project.editor.ProjectEditorActivity"><!--activity名称-->
+	
+		<element name="微爱通道筹款说明">
+            <name>微爱通道筹款说明</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/title</pathvalue>
+        </element>
+		
+		<element name="我知道了">
+            <name>我知道了</name>
+            <type>Button</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/positiveButton</pathvalue>
+        </element>
+		
+		<element name="目标金额">
+            <name>填写目标金额</name>
+            <type>EditText</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/tv_goal_amount</pathvalue>
+        </element>
+		
+		<element name="设为隐私项目">
+            <name>设为隐私项目</name>
+            <type>View</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/sw_private</pathvalue>
+        </element>
+		
+		<element name="资金用途">
+            <name>资金用途(不可修改)，如手术费、康复费等</name>
+            <type>EditText</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/et_funds_use</pathvalue>
+        </element>
+		
+		<element name="大病筹款标题">
+            <name>填写筹款标题</name>
+            <type>EditText</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/title</pathvalue>
+        </element>
+
+
+        <element name="筹款标题">
+            <name>填写筹款标题</name>
+            <type>EditText</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/title</pathvalue>
+        </element>
+
+        <element name="筹款内容">
+            <name>筹款内容</name>
+            <type>EditText</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/et_content</pathvalue>
+        </element>
+		
+		<element name="添加图片">
+            <name>添加图片</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/iv_default_img</pathvalue>
+        </element>
+	
+		<element name="下一步">
+            <name>下一步</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/next_step</pathvalue>
+        </element>
+		
+	</activity>
+	
+	<!--大病救助 2级菜单 -->
+	<activity name = "publish.love.TinyLoveProjectTwoActivity"><!--activity名称--> 
+	
+		<element name="收款人与受助人关系">
+            <name>收款人与受助人关系</name>
+            <type>TextView</type>
+            <pathtype>name</pathtype>
+            <pathvalue>收款人与受助人关系</pathvalue>
+        </element>
+
+        <element name="收款人与受助人关系">
+            <name>收款人与受助人关系</name>
+            <type>TextView</type>
+            <pathtype>name</pathtype>
+            <pathvalue>收款人与受助人关系</pathvalue>
+        </element>
+		
+		<element name="受助人本人">
+            <name>受助人本人</name>
+            <type>TextView</type>
+            <pathtype>name</pathtype>
+            <pathvalue>受助人本人</pathvalue>
+        </element>
+		
+		<element name="父母/亲兄弟姐妹">
+            <name>父母/亲兄弟姐妹</name>
+            <type>TextView</type>
+            <pathtype>name</pathtype>
+            <pathvalue>父母/亲兄弟姐妹</pathvalue>
+        </element>
+		
+		<element name="夫妻关系">
+            <name>夫妻关系</name>
+            <type>TextView</type>
+            <pathtype>name</pathtype>
+            <pathvalue>夫妻关系</pathvalue>
+        </element>
+		
+		<element name="以组织名义发起">
+            <name>以组织名义发起</name>
+            <type>TextView</type>
+            <pathtype>name</pathtype>
+            <pathvalue>以组织名义发起</pathvalue>
+        </element>
+		
+		<element name="稍后再验证">
+            <name>稍后再验证</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/tv_love_wait_check</pathvalue>
+        </element>
+		
+	</activity>
+	
+	<!--其他 二级菜单 -->
+	<activity name = ".ui.activity.publish.love.TinyLoveProjectTwoOtherActivity"><!--activity名称-->
+	
+		<element name="收款主体资质验证">
+            <name>收款主体资质验证</name>
+            <type>TextView</type>
+            <pathtype>name</pathtype>
+            <pathvalue>收款主体资质验证</pathvalue>
+        </element>
+		
+		<element name="组织机构">
+            <name>组织机构</name>
+            <type>TextView</type>
+            <pathtype>name</pathtype>
+            <pathvalue>组织机构</pathvalue>
+        </element>
+		
+		<element name="个人">
+            <name>个人</name>
+            <type>TextView</type>
+            <pathtype>name</pathtype>
+            <pathvalue>个人</pathvalue>
+        </element>
+		
+		<element name="稍后再验证">
+            <name>稍后再验证</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/tv_love_wait_check</pathvalue>
+        </element>
+		
+		<element name="确认稍后验证">
+            <name>确认稍后验证</name>
+            <type>Button</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/positiveButton</pathvalue>
+        </element>
+		
+		<element name="取消稍后验证">
+            <name>取消稍后验证</name>
+            <type>Button</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/negativeButton</pathvalue>
+        </element>
+		
+	</activity>
+	
+	<!--大病救助 确认信息菜单 ***添加照片存在问题*** -->
+	<activity name = ".ui.activity.project.verify.VerifyActivity"><!--activity名称-->
+	
+		<element name="下一步">
+            <name>下一步</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/next_step</pathvalue>
+        </element>
+	
+		<element name="收款人信息">
+            <name>收款人信息</name>
+            <type>TextView</type>
+            <pathtype>name</pathtype>
+            <pathvalue>收款人信息</pathvalue>
+        </element>
+		
+		<element name="收款人真实姓名">
+            <name>填写收款人真实姓名</name>
+            <type>EditText</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/et_creator_name</pathvalue>
+        </element>
+		
+		<element name="收款人身份证号码">
+            <name>填写收款人身份证号码</name>
+            <type>EditText</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/et_creator_id</pathvalue>
+        </element>
+		
+		<element name="填写收款人联系电话">
+            <name>填写收款人联系电话</name>
+            <type>EditText</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/et_creator_phone</pathvalue>
+        </element>
+		
+		<element name="添加银行卡">
+            <name>添加银行卡</name>
+            <type>LinearLayout</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/ll_add_bank</pathvalue>
+        </element>
+		
+		<element name="银行卡">
+            <name>银行卡</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/tv_receiver_name</pathvalue>
+        </element>
+		
+		<element name="受助人真实姓名">
+            <name>填写受助人真实姓名</name>
+            <type>EditText</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/aided_name</pathvalue>
+        </element>
+		
+		<element name="受助人身份证号码">
+            <name>填写受助人身份证号码</name>
+            <type>EditText</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/aided_id_card</pathvalue>
+        </element>
+		
+		<element name="组织机构">
+            <name>组织机构</name>
+            <type>EditText</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/et_organization_name</pathvalue>
+        </element>
+		
+		<element name="组织电话">
+            <name>组织电话 (例如010–12345678)</name>
+            <type>EditText</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/et_organization_photo</pathvalue>
+        </element>
+		
+		<element name="受助人所在医院">
+            <name>受助人所在医院</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/tv_hospital_name</pathvalue>
+        </element>
+		
+		<element name="受助人所患疾病">
+            <name>受助人所患疾病</name>
+            <type>EditText</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/et_sick_name</pathvalue>
+        </element>
+		
+		<element name="身份证照片">
+            <name>添加照片</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/iv_default_img</pathvalue>
+        </element>
+		
+		<element name="医疗诊断证明">
+            <name>添加照片</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/iv_default_img</pathvalue>
+        </element>
+		
+		<element name="收款人户口页">
+            <name>收款人户口页</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/picture</pathvalue>
+        </element>
+		
+		<element name="受助人户口页">
+            <name>受助人户口页</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/picture</pathvalue>
+        </element>
+		
+		<element name="其他补充照片">
+            <name>其他补充照片</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/picture</pathvalue>
+        </element>
+		
+		<element name="结婚证">
+            <name>结婚证</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/picture</pathvalue>
+        </element>
+
+        <element name="受助人身份证照片">
+            <name>受助人身份证照片</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/picture</pathvalue>
+        </element>
+
+        <element name="组织机构资质证明">
+            <name>组织机构资质证明</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/picture</pathvalue>
+        </element>
+		
+	</activity>
+	
+	<!--其他 确认信息菜单 -->
+	<activity name = ".ui.activity.project.love.verify.LoveVerifyActivity"><!--activity名称-->
+		
+		<element name="下一步">
+            <name>下一步</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/next_step</pathvalue>
+        </element>
+		
+		<element name="收款人信息">
+            <name>收款人信息</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/tv_title</pathvalue>
+        </element>
+		
+		<element name="真实姓名">
+            <name>填写收款人真实姓名</name>
+            <type>EditText</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/payee_name</pathvalue>
+        </element>
+		
+		<element name="身份证号">
+            <name>填写收款人身份证号码</name>
+            <type>EditText</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/payee_id_card</pathvalue>
+        </element>
+		
+		<element name="联系电话">
+            <name>填写收款人联系电话</name>
+            <type>EditText</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/payee_phone</pathvalue>
+        </element>
+		
+		<element name="身份证照片">
+            <name>添加照片</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/iv_default_img</pathvalue>
+        </element>
+		
+		<element name="资金用途照片">
+            <name>添加照片</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/iv_default_img</pathvalue>
+        </element>
+		
+		<element name="添加银行卡">
+            <name>添加银行卡</name>
+            <type>LinearLayout</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/ll_add_bank</pathvalue>
+        </element>
+		
+		<element name="银行卡">
+            <name>银行卡</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/tv_receiver_name</pathvalue>
+        </element>
+		
+		<element name="收款组织全称">
+            <name>填写收款组织全称</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/payee_name</pathvalue>
+        </element>
+		
+		<element name="收款组织联系电话">
+            <name>填写收款组织联系电话</name>
+            <type>LinearLayout</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/payee_phone</pathvalue>
+        </element>
+		
+		
+		
+	</activity>
+	
+	<!--确认成功菜单 -->
+	<activity name = ".ui.activity.project.ProjectSuccessActivity"><!--activity名称-->
+	
+		<element name="项目发起成功">
+            <name>项目发起成功</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/tv_text</pathvalue>
+        </element>
+		
+		<element name="查看项目">
+            <name>查看项目</name>
+            <type>Button</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/btn_view_project</pathvalue>
+        </element>
+		
+		<element name="完成">
+            <name>完成</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/complete</pathvalue>
+        </element>
+		
+		<element name="项目验证">
+            <name>项目验证</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/btn_apply_recommend</pathvalue>
+        </element>
+		
+		
+	</activity>
+   
+   <!--添加银行卡 界面 -->
+	<activity name = "account.bankcard.BankCardAddActivity"><!--activity名称--> 
+	
+		<element name="个人银行卡">
+            <name>个人银行卡</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/v_tab1</pathvalue>
+        </element>
+
+		<element name="对公银行卡">
+            <name>对公银行卡</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/v_tab2</pathvalue>
+        </element>
+		
+		<element name="开户人姓名">
+            <name>填写开户人姓名</name>
+            <type>EditText</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/et_realName</pathvalue>
+        </element>
+		
+		<element name="银行卡号">
+            <name>填写银行卡号</name>
+            <type>EditText</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/et_id_no</pathvalue>
+        </element>
+		
+		<element name="开户银行">
+            <name>开户银行</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/ll_bank_name</pathvalue>
+        </element>
+		
+		<element name="确定">
+            <name>确定</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/confirm</pathvalue>
+        </element>
+
+        <element name="下一步">
+            <name>下一步</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/next_step</pathvalue>
+        </element>
+		
+	</activity>
+	
+	<!--银行卡 界面 -->
+	<activity name = "account.bankcard.BankListActivity"><!--activity名称--> 
+		
+		<element name="工商银行">
+            <name>工商银行</name>
+            <type>TextView</type>
+            <pathtype>name</pathtype>
+            <pathvalue>工商银行</pathvalue>
+        </element>
+		
+	</activity>
+	
+	<!--图片上传 界面 -->
+	<activity name = "com.qingsongchou.library.photopick.PhotoPickerActivity"><!--activity名称-->
+
+		
+		<element name="完成">
+            <name>完成</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/done</pathvalue>
+        </element>
+		
+		<element name="添加图片">
+            <name>添加图片</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/iv_selected</pathvalue>
+        </element>
+		
+		<element name="添加图片2">
+            <name>添加图片</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/iv_selected</pathvalue>
+			<index>1</index>
+        </element>
+		
+		<element name="添加图片3">
+            <name>添加图片</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/iv_selected</pathvalue>
+			<index>2</index>
+        </element>
+		
+		<element name="添加图片4">
+            <name>添加图片</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/iv_selected</pathvalue>
+			<index>3</index>
+        </element>
+		
+		<element name="添加图片5">
+            <name>添加图片</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/iv_selected</pathvalue>
+			<index>4</index>
+        </element>
+		
+		<element name="添加图片6">
+            <name>添加图片</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/iv_selected</pathvalue>
+			<index>5</index>
+        </element>
+		
+		<element name="添加图片7">
+            <name>添加图片</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/iv_selected</pathvalue>
+			<index>6</index>
+        </element>
+		
+		<element name="添加图片8">
+            <name>添加图片</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/iv_selected</pathvalue>
+			<index>7</index>
+        </element>
+		
+		
+		
+	</activity>
+<!--我是分割线我是分割线我是分割线我是分割线我是分割线我是分割线我是分割线我是分割线我是分割线我是分割线我是分割线-->
+<!--上面是微爱通道，下面是尝鲜预售-->	
+
+	<!--尝鲜预售 界面 -->
+	<activity name = ".ui.activity.publish.sale.SaleBasicInfoActivity"><!--activity名称-->
+
+		<element name="尝鲜预售筹款说明">
+            <name>尝鲜预售筹款说明</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/title</pathvalue>
+        </element>
+		
+		<element name="我知道了">
+            <name>我知道了</name>
+            <type>Button</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/positiveButton</pathvalue>
+        </element>
+
+        <element name="向右滑动筹款天数">
+            <name>向右滑动筹款天数</name>
+            <type>TextView</type>
+            <pathtype>coordinate</pathtype>
+            <resolution>1080x1920</resolution>
+            <start_x>271</start_x>
+            <start_y>539</start_y>
+            <end_x>870</end_x>
+            <end_y>539</end_y>
+        </element>
+
+		<element name="支持者收件地址开关">
+            <name>支持者收件地址开关</name>
+            <type>view</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/supporter_address_switch</pathvalue>
+        </element>
+		
+		<element name="目标金额">
+            <name>填写目标金额</name>
+            <type>EditText</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/money</pathvalue>
+        </element>
+		
+		<element name="设为隐私项目">
+            <name>设为隐私项目</name>
+            <type>View</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/privacy_project_switch</pathvalue>
+        </element>
+		
+		<element name="运费">
+            <name>请填写运费</name>
+            <type>EditText</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/sale_product_freight</pathvalue>
+        </element>
+		
+		<element name="发货时间">
+            <name>请输入发货时间</name>
+            <type>EditText</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/sale_product_delivery_time</pathvalue>
+        </element>
+		
+		<element name="预售产品标题">
+            <name>你要预售什么产品？（标题）</name>
+            <type>EditText</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/product_title</pathvalue>
+        </element>
+		
+		<element name="预售产品内容">
+            <name>详细介绍下你的产品（内容）</name>
+            <type>EditText</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/product_detail_content</pathvalue>
+        </element>
+		
+		<element name="项目标签">
+            <name>项目标签</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/tags</pathvalue>
+        </element>
+		
+		<element name="添加图片">
+            <name>添加图片</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/iv_default_img</pathvalue>
+        </element>
+	
+		<element name="下一步">
+            <name>下一步</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/next_step</pathvalue>
+        </element>
+
+
+	</activity>
+	
+	<!--尝鲜预售 项目标签 -->
+	<activity name = ".ui.activity.publish.PublishAddTagActivity"><!--activity名称-->
+		
+		<element name="确定">
+            <name>确定</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/action_sure</pathvalue>
+        </element>
+		
+		<element name="有机养生">
+            <name>有机养生</name>
+            <type>TextView</type>
+            <pathtype>name</pathtype>
+            <pathvalue>有机养生</pathvalue>
+        </element>
+		
+		<element name="天赐美食">
+            <name>天赐美食</name>
+            <type>TextView</type>
+            <pathtype>name</pathtype>
+            <pathvalue>天赐美食</pathvalue>
+        </element>
+		
+		<element name="原产地">
+            <name>原产地</name>
+            <type>TextView</type>
+            <pathtype>name</pathtype>
+            <pathvalue>原产地</pathvalue>
+        </element>	
+		
+	</activity>
+	
+	<!--尝鲜预售  第二步-->
+	<activity name = ".ui.activity.publish.sale.SaleAddRewardActivity"><!--activity名称-->
+		
+		<element name="下一步">
+            <name>下一步</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/next_step</pathvalue>
+        </element>
+		
+		<element name="支持金额">
+            <name>填写目标金额</name>
+            <type>EditText</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/et_support_money</pathvalue>
+        </element>
+		
+		<element name="回报内容">
+            <name>填入回报内容</name>
+            <type>EditText</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/et_return_content</pathvalue>
+        </element>
+		
+		<element name="限制数量">
+            <name>限制数量</name>
+            <type>EditText</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/et_limit_num</pathvalue>
+        </element>
+		
+		<element name="添加图片">
+            <name>添加图片</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/iv_default_img</pathvalue>
+        </element>
+
+        <element name="完成">
+            <name>完成</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/complete</pathvalue>
+        </element>
+		
+	</activity>
+
+    <activity name = ".ui.activity.publish.sale.SaleRewardListActivity">
+
+		<element name="发布">
+            <name>发布</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/next_step</pathvalue>
+        </element>
+
+		<element name="继续添加">
+            <name>继续添加</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/layout_add</pathvalue>
+        </element>
+
+	</activity>
+	<!--尝鲜预售  项目验证-->
+    <activity name = ".ui.activity.publish.sale.SaleVerityActivity">
+
+		<element name="个人名义发起">
+            <name>个人名义发起</name>
+            <type>TextView</type>
+            <pathtype>name</pathtype>
+            <pathvalue>个人名义发起</pathvalue>
+        </element>
+
+		<element name="个体/企业名义发起">
+            <name>个体/企业名义发起</name>
+            <type>TextView</type>
+            <pathtype>name</pathtype>
+            <pathvalue>个体/企业名义发起</pathvalue>
+        </element>
+
+	</activity>
+
+    <activity name = ".ui.activity.publish.sale.SaleVerityPersonActivity">
+
+		<element name="真实姓名">
+            <name>真实姓名</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/et_realName</pathvalue>
+        </element>
+
+        <element name="身份证号">
+            <name>身份证号</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/et_ID_No</pathvalue>
+        </element>
+
+         <element name="联系号码">
+            <name>联系号码</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/et_phone</pathvalue>
+        </element>
+
+        <element name="上传身份证照片">
+            <name>上传身份证照片</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/iv_default_img</pathvalue>
+        </element>
+
+        <element name="上传营业执照照片">
+            <name>营业执照照片</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/iv_default_img</pathvalue>
+        </element>
+
+        <element name="提交">
+            <name>提交</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/commit</pathvalue>
+        </element>
+	</activity>
+
+	<!--尝鲜预售  第三步-->
+	<activity name = ".ui.activity.publish.sale.SaleProjectCreatedActivity"><!--activity名称-->
+		
+		<element name="查看项目">
+            <name>查看项目</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/view</pathvalue>
+        </element>
+
+		
+	</activity>
+	
+<!--我是分割线我是分割线我是分割线我是分割线我是分割线我是分割线我是分割线我是分割线我是分割线我是分割线我是分割线-->
+<!--上面是尝鲜预售，下面是实现梦想-->	
+<!--实现梦想 界面 -->
+	<activity name = ".ui.activity.publish.dream.PublishDreamActivity"><!--activity名称-->
+		
+		<element name="梦想清单筹款说明">
+            <name>梦想清单筹款说明</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/title</pathvalue>
+        </element>
+		
+		<element name="我知道了">
+            <name>我知道了</name>
+            <type>Button</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/positiveButton</pathvalue>
+        </element>
+		
+		<element name="支持者收件地址开关">
+            <name>需要支持者收件地址</name>
+            <type>view</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/sv_get_info</pathvalue>
+        </element>
+		
+		<element name="目标金额">
+            <name>填写目标金额</name>
+            <type>EditText</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/goal_amount</pathvalue>
+        </element>
+		
+		<element name="设为隐私项目">
+            <name>设为隐私项目</name>
+            <type>View</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/sv_privacy</pathvalue>
+        </element>
+		
+		<element name="梦想标题">
+            <name>你的梦想是什么(标题)</name>
+            <type>EditText</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/et_title</pathvalue>
+        </element>
+		
+		<element name="梦想内容">
+            <name>详细描述下你的梦想与故事</name>
+            <type>EditText</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/et_description</pathvalue>
+        </element>
+		
+		<element name="项目标签">
+            <name>项目标签</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/tv_tag</pathvalue>
+        </element>
+		
+		<element name="添加图片">
+            <name>添加图片</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>om.qingsongchou.social:id/picture</pathvalue>
+        </element>
+	
+		<element name="下一步">
+            <name>下一步</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/next_step</pathvalue>
+        </element>
+	</activity>
+	
+	<!--实现梦想 项目标签 -->
+	<activity name = ".ui.activity.publish.PublishAddTagActivity"><!--activity名称-->
+		
+		<element name="确定">
+            <name>确定</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/action_sure</pathvalue>
+        </element>
+		
+		<element name="懵懂天真">
+            <name>懵懂天真</name>
+            <type>TextView</type>
+            <pathtype>name</pathtype>
+            <pathvalue>懵懂天真</pathvalue>
+        </element>
+		
+		<element name="艺术">
+            <name>艺术</name>
+            <type>TextView</type>
+            <pathtype>name</pathtype>
+            <pathvalue>艺术</pathvalue>
+        </element>
+		
+		<element name="看世界">
+            <name>看世界</name>
+            <type>TextView</type>
+            <pathtype>name</pathtype>
+            <pathvalue>看世界</pathvalue>
+        </element>	
+		
+	</activity>
+	
+	<!--实现梦想  第二步-->
+	<activity name = ".ui.activity.publish.dream.PublishDreamAddActivity"><!--activity名称-->
+		
+		<element name="下一步">
+            <name>下一步</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/next_step</pathvalue>
+        </element>
+		
+		<element name="支持金额">
+            <name>填写目标金额</name>
+            <type>EditText</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/et_support_money</pathvalue>
+        </element>
+		
+		<element name="回报内容">
+            <name>填入回报内容</name>
+            <type>EditText</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/et_return_content</pathvalue>
+        </element>
+		
+	</activity>
+	
+	<!--实现梦想  第三步-->
+	<activity name = ".ui.activity.publish.dream.PublishDreamListActivity"><!--activity名称-->
+		
+		<element name="继续添加">
+            <name>继续添加</name>
+            <type>TextView</type>
+            <pathtype>name</pathtype>
+            <pathvalue>继续添加</pathvalue>
+        </element>
+		
+		<element name="发起项目">
+            <name>发起项目</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/launch</pathvalue>
+        </element>
+
+        <element name="项目发起条款">
+            <name>项目发起条款</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/tv_read</pathvalue>
+        </element>
+
+	    <element name="我知道了">
+            <name>我知道了</name>
+            <type>Button</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/positiveButton</pathvalue>
+        </element>
+	</activity>
+
+    <activity name = ".ui.activity.publish.dream.DreamVerityActivity">
+        <element name="个人名义发起">
+            <name>个人名义发起</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/layout_person</pathvalue>
+        </element>
+
+        <element name="组织名义发起">
+            <name>组织名义发起</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/layout_business</pathvalue>
+        </element>
+
+        <element name="稍后再验证">
+            <name>稍后再验证</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/tv_ignore</pathvalue>
+        </element>
+    </activity>
+
+    <activity name = ".ui.activity.publish.dream.DreamVerityPersonActivity">
+
+        <element name="真实姓名">
+            <name>真实姓名</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/et_realName</pathvalue>
+        </element>
+
+        <element name="身份证号">
+            <name>身份证号</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/et_ID_No</pathvalue>
+        </element>
+
+         <element name="联系号码">
+            <name>联系号码</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/et_phone</pathvalue>
+        </element>
+
+        <element name="上传身份证照片">
+            <name>上传身份证照片</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/iv_default_img</pathvalue>
+        </element>
+
+        <element name="添加银行卡">
+            <name>添加银行卡</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/ll_add_bank</pathvalue>
+        </element>
+
+        <element name="银行卡">
+            <name>银行卡</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/tv_receiver_name</pathvalue>
+        </element>
+
+        <element name="上传项目证明材料">
+            <name>上传项目证明材料</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/iv_default_img</pathvalue>
+        </element>
+
+        <element name="提交">
+            <name>提交</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/commit</pathvalue>
+        </element>
+    </activity>
+
+<!--我是分割线我是分割线我是分割线我是分割线我是分割线我是分割线我是分割线我是分割线我是分割线我是分割线我是分割线-->
+<!--下面为自我验证-->
+	<!--发起项目界面-->
+	<activity name = ".project.ProjectLaunchActivity"><!--activity名称-->
+		
+		<element name="已成功">
+            <name>已成功</name> 
+            <type>TextView</type>
+            <pathtype>name</pathtype>
+            <pathvalue>已成功</pathvalue>
+        </element>
+		
+		<element name="进行中">
+            <name>进行中</name>
+            <type>TextView</type>
+            <pathtype>name</pathtype>
+            <pathvalue>进行中</pathvalue>
+        </element>
+		
+		<element name="已失败">
+            <name>已失败</name>
+            <type>TextView</type>
+            <pathtype>name</pathtype>
+            <pathvalue>已失败</pathvalue>
+        </element>
+
+
+		
+	</activity>
+	
+	<!--微爱自我验证详情-->
+	<activity name = ".project.detail.love.ProjectDetailLoveActivity"><!--activity名称-->
+		
+		<element name="我要支持">
+            <name>我要支持</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/support</pathvalue>
+        </element>
+		
+		<element name="项目管理">
+            <name>项目管理</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/iv_toolbar_menu</pathvalue>
+        </element>
+		
+		
+	</activity>
+	
+	<!--尝鲜预售自我验证详情-->
+	<activity name = ".project.detail.sale.ProjectDetailSaleActivity"><!--activity名称-->
+
+        <element name="管理">
+            <name>管理</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/iv_toolbar_menu</pathvalue>
+        </element>
+
+		<element name="当前页面">
+            <name>当前页面</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/tv_title</pathvalue>
+        </element>
+		
+		<element name="查看项目详情">
+            <name>查看项目详情</name>
+            <type>TextView</type>
+            <pathtype>name</pathtype>
+            <pathvalue>查看项目详情</pathvalue>
+        </element>
+		
+		<element name="banner">
+            <name>banner</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/image</pathvalue>
+        </element>
+		
+		<element name="返回">
+            <name>返回</name>
+            <type>TextView</type>
+            <pathtype>class</pathtype>
+            <pathvalue>android.widget.ImageButton</pathvalue>
+        </element>
+
+        <element name="滑动">
+            <name>项目管理滑动</name>
+            <type>TextView</type>
+            <pathtype>coordinate</pathtype>
+            <resolution>1080x1920</resolution>
+            <start_x>832</start_x>
+            <start_y>1105</start_y>
+            <end_x>67</end_x>
+            <end_y>1105</end_y>
+        </element>
+
+	</activity>
+
+	<!--实现梦想自我验证详情-->
+	<activity name = ".project.detail.ProjectDetailDreamActivity"><!--activity名称-->
+		
+		<element name="当前页面">
+            <name>当前页面</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/tv_title</pathvalue>
+        </element>
+		
+		<element name="项目管理">
+            <name>当前页面</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/action_manager</pathvalue>
+        </element>
+
+        <element name="发起者昵称">
+            <name>发起者昵称</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/tv_name</pathvalue>
+        </element>
+
+        <element name="发起者头像">
+            <name>发起者头像</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/cv_avatar</pathvalue>
+        </element>
+
+        <element name="项目标题">
+            <name>项目标题</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/tv_title</pathvalue>
+        </element>
+
+        <element name="项目剩余时间">
+            <name>项目剩余时间</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/tv_state</pathvalue>
+        </element>
+
+        <element name="查看项目详情">
+            <name>查看项目详情</name>
+            <type>TextView</type>
+            <pathtype>name</pathtype>
+            <pathvalue>查看项目详情</pathvalue>
+        </element>
+
+        <element name="关注项目">
+            <name>关注项目</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/favorite</pathvalue>
+        </element>
+
+        <element name="分享项目">
+            <name>分享项目</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/share</pathvalue>
+        </element>
+
+        <element name="我要支持">
+            <name>我要支持</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/support</pathvalue>
+        </element>
+
+        <element name="回复动态">
+            <name>回复动态</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/iv_comment</pathvalue>
+        </element>
+
+        <element name="输入回复内容">
+            <name>输入回复内容</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/msg</pathvalue>
+        </element>
+
+        <element name="生成二维码">
+            <name>生成二维码</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/qrCodeView</pathvalue>
+        </element>
+
+        <element name="微博分享">
+            <name>微博分享</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/weiboView</pathvalue>
+        </element>
+
+        <element name="朋友圈分享">
+            <name>朋友圈分享</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/wechatMomentView</pathvalue>
+        </element>
+
+        <element name="微信分享">
+            <name>微信分享</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/wechatView</pathvalue>
+        </element>
+
+        <element name="空间分享">
+            <name>空间分享</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/qqView</pathvalue>
+        </element>
+
+        <element name="口令分享">
+            <name>口令分享</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/keywordsView</pathvalue>
+        </element>
+
+        <element name="取消">
+            <name>取消</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/bottomCancel</pathvalue>
+        </element>
+		
+	</activity>
+	
+	<!--微信支付-->
+	<activity name = ".project.support.ProjectSupportLoveActivity"><!--activity名称-->
+		
+		<element name="下一步">
+            <name>下一步</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/confirm</pathvalue>
+        </element>
+		
+		<element name="10元">
+            <name>10元</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/tv_money_first</pathvalue>
+        </element>
+		
+		<element name="其他金额">
+            <name>其他金额</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/et_amount</pathvalue>
+        </element>
+		
+		<element name="留言">
+            <name>跟小伙伴们说一句话吧（默认：支持）</name>
+            <type>EditText</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/et_content</pathvalue>
+        </element>
+		
+	</activity>
+	
+	<!--微信支付确认界面-->
+	<activity name = "plugin.wallet.pay.ui.WalletPayUI"><!--activity名称-->
+		
+		<element name="立即支付">
+            <name>立即支付</name>
+            <type>Button</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/cpq</pathvalue>
+        </element>
+		
+		<element name="返回">
+            <name>返回</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/f1</pathvalue>
+        </element>
+		
+	</activity>
+	
+	<!--用户修改界面-->
+	<activity name = "account.editor.AccountEditActivity"><!--activity名称-->
+		<element name="更换头像">
+            <name>更换头像</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/rl_avatar</pathvalue>
+        </element>
+
+		<element name="更改昵称">
+            <name>更改昵称</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/rl_nickname</pathvalue>
+        </element>
+
+		<element name="填写昵称">
+            <name>填写昵称</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/nickname</pathvalue>
+        </element>
+		
+		<element name="收件地址">
+            <name>收件地址</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/rl_receiver_address</pathvalue>
+        </element>
+
+		<element name="确认昵称">
+            <name>确认昵称</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/tv_sure</pathvalue>
+        </element>
+
+		<element name="银行卡">
+            <name>银行卡</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/rl_bankcard</pathvalue>
+        </element>
+
+		<element name="返回">
+            <name>返回</name>
+            <type>TextView</type>
+            <pathtype>class</pathtype>
+            <pathvalue>android.widget.ImageButton</pathvalue>
+        </element>
+
+
+		<element name="银行卡">
+            <name>银行卡</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/tv_bankcard</pathvalue>
+        </element>
+		
+		<element name="返回">
+            <name>返回</name>
+            <type>TextView</type>
+            <pathtype>class</pathtype>
+            <pathvalue>android.widget.ImageButton</pathvalue>
+			<index>0</index>
+        </element>
+	</activity>
+
+	<activity name = "account.address.AddressListActivity"><!--activity名称-->
+		<element name="添加地址">
+            <name>添加地址</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/action_add</pathvalue>
+        </element>
+
+		<element name="返回">
+            <name>返回</name>
+            <type>TextView</type>
+            <pathtype>class</pathtype>
+            <pathvalue>android.widget.ImageButton</pathvalue>
+        </element>
+
+	</activity>
+
+	<activity name = "account.address.AddressEditorActivity"><!--activity名称-->
+
+		<element name="收件人">
+            <name>收件人</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/recipientInput</pathvalue>
+        </element>
+
+        <element name="联系方式">
+            <name>联系方式</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/phoneInput</pathvalue>
+        </element>
+
+        <element name="所在地区">
+            <name>所在地区</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/regionInput</pathvalue>
+        </element>
+
+        <element name="详细地址">
+            <name>详细地址</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/addressInput</pathvalue>
+        </element>
+
+         <element name="确定修改地址">
+            <name>确认修改地址</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/action_sure</pathvalue>
+        </element>
+	</activity>
+
+	<activity name = "account.region.RegionSelectActivity"><!--activity名称-->
+        <element name="详细地址">
+            <name>详细地址</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/addressInput</pathvalue>
+        </element>
+    </activity>
+
+	<activity name = "account.bankcard.BankCardListActivity"><!--activity名称-->
+
+ 		<element name="添加银行卡">
+            <name>添加银行卡</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/action_add</pathvalue>
+        </element>
+
+		<element name="工商银行">
+            <name>工商银行</name>
+            <type>TextView</type>
+            <pathtype>name</pathtype>
+            <pathvalue>工商银行</pathvalue>
+        </element>
+		
+		<element name="删除">
+            <name>删除</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/delete</pathvalue>
+        </element>
+		
+		<element name="返回">
+            <name>返回</name>
+            <type>TextView</type>
+            <pathtype>class</pathtype>
+            <pathvalue>android.widget.ImageButton</pathvalue>
+			<index>0</index>
+        </element>
+
+        <element name="向左滑动银行卡">
+            <name>向左滑动银行卡</name>
+            <type>TextView</type>
+            <pathtype>coordinate</pathtype>
+            <start_x>840</start_x>
+            <start_y>243</start_y>
+            <end_x>0</end_x>
+            <end_y>243</end_y>
+        </element>
+
+	</activity>
+	
+	<activity name = "com.qingsongchou.library.imagecrop.CropImageActivity"><!--activity名称-->
+        <element name="确认头像">
+            <name>确认头像</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/btn_done</pathvalue>
+        </element>
+
+        <element name="取消头像">
+            <name>取消头像</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/btn_cancel</pathvalue>
+        </element>
+    </activity>
+	
+	<!--支持记录页面(发起者)-->
+	<activity name = ".project.record.ProjectRecordBrowseOtherActivity"><!--activity名称-->
+
+        <element name="返回">
+            <name>返回</name>
+            <type>TextView</type>
+            <pathtype>class</pathtype>
+            <pathvalue>android.widget.ImageButton</pathvalue>
+        </element>
+
+    </activity>
+
+    	<!--梦想项目编辑第一页面(发起者)-->
+	<activity name = ".ui.activity.project.editor.ProjectEditorDreamOneActivity"><!--activity名称-->
+
+        <element name="下一步">
+            <name>下一步</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/next_step</pathvalue>
+        </element>
+
+        <element name="更改项目标题">
+            <name>更改项目标题</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/et_title</pathvalue>
+        </element>
+
+        <element name="更改项目内容">
+            <name>更改项目内容</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/et_description</pathvalue>
+        </element>
+
+        <element name="添加一张新的项目图片">
+            <name>添加一张新的项目图片</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/iv_default_img</pathvalue>
+        </element>
+
+
+
+    </activity>
+
+    	<!--梦想项目编辑第二页面(发起者)-->
+	<activity name = ".project.editor.ProjectEditorDreamTwoActivity"><!--activity名称-->
+
+          <element name="添加一份新的清单">
+            <name>添加一份新的清单</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/layout_add</pathvalue>
+        </element>
+
+        <element name="确认">
+            <name>确认</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/action_confirm</pathvalue>
+        </element>
+
+    </activity>
+
+  	<!--更新动态(发起者)-->
+	<activity name = ".ui.activity.project.ProjectDynamicActivity"><!--activity名称-->
+
+        <element name="更新动态">
+            <name>更新动态</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/et_update_content</pathvalue>
+        </element>
+
+        <element name="确定">
+            <name>确定</name>
+            <type>Button</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/button1</pathvalue>
+        </element>
+
+
+		<element name="上传图片">
+            <name>上传图片</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/iv_default_img</pathvalue>
+        </element>
+
+        <element name="更新动态图片">
+            <name>更新动态图片</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/iv_default_img</pathvalue>
+        </element>
+
+          <element name="发布动态">
+            <name>发布动态</name>
+            <type>TextView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/commit</pathvalue>
+        </element>
+
+        <element name="确定">
+            <name>确定</name>
+            <type>Button</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/positiveButton</pathvalue>
+        </element>
+
+    </activity>
+
+	
+	<!--H5页面 -->
+	<activity name = "ui.activity.h5.H5Activity"><!--activity名称--> 
+	
+		<element name="返回">
+            <name>返回</name>
+            <type>ImageButton</type>
+            <pathtype>class</pathtype>
+            <pathvalue>android.widget.ImageButton</pathvalue>
+        </element>
+		
+	</activity>
+	
+	<!--首页查看项目页面の图片页面 -->
+	<activity name = "PhotoActivity"><!--activity名称--> 
+	
+		<element name="图片">
+            <name>图片</name>
+            <type>ImageView</type>
+            <pathtype>class</pathtype>
+            <pathvalue>android.widget.ImageView</pathvalue>
+        </element>
+		
+	</activity>
+
+    <activity name = ".ui.activity.project.editor.ProjectEditorLoveAmountActivity"><!--activity名称-->
+
+		<element name="上传图片">
+            <name>上传图片</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/iv_default_img</pathvalue>
+        </element>
+
+	</activity>
+
+    <activity name = ".ui.activity.project.detail.ProjectDetailLoveActivity"><!--activity名称-->
+
+		<element name="项目验证">
+            <name>项目验证</name>
+            <type>ImageView</type>
+            <pathtype>id</pathtype>
+            <pathvalue>com.qingsongchou.social:id/icon</pathvalue>
+            <index>5</index>
+        </element>
+
+        <element name="滑动">
+            <name>项目管理滑动</name>
+            <type>TextView</type>
+            <pathtype>coordinate</pathtype>
+            <resolution>1080x1920</resolution>
+            <start_x>832</start_x>
+            <start_y>1105</start_y>
+            <end_x>67</end_x>
+            <end_y>1105</end_y>
+        </element>
+
+	</activity>
+
+</page>
