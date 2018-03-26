@@ -1,5 +1,5 @@
 # __author__ = 'zhanghzhiyuan'
-# -*-coding:utf-8-*-
+# -*- coding:utf-8 -*-
 
 from myunit import MyTest
 from base import Page
@@ -10,15 +10,15 @@ import re,os
 import time
 from retrying import retry
 import sys
-'''
+"""
 ===========说明============
 功能:测试用例执行
 入口:ecxel表格测试用例
 ==========================
-'''
+"""
 
 class Testcase(Page):
-    '''测试用例基础类'''
+    """测试用例基础类"""
     # loggeer = logging.getLogger('zzy')
     def __init__(self,driver,onecase,sheetname):
         super(Testcase,self).__init__()
@@ -33,7 +33,7 @@ class Testcase(Page):
         self.value = self.testcase['value']
         self.expected = self.testcase['expected']
         #获取设备分辨率
-        f_ini = os.path.dirname(__file__).split('test_case')[0] + 'data/config.ini'
+        f_ini = os.path.dirname(sys.path[0]).split('test_case')[0] + 'data/config.ini'
         config = ConfigParser.ConfigParser()
         config.read(f_ini)
         self.resolution = config.get('APPCONFIG','resolution')
@@ -63,7 +63,7 @@ class Testcase(Page):
 
     @retry(wait_fixed = 5000,stop_max_attempt_number = 2,retry_on_exception = retry_if_ValueError_error)
     def execute_case(self):
-        '''执行测试用例'''
+        """执行测试用例"""
         loggeer = logging.getLogger('zzy')
         #-------------------------------------执行测试用例---------------------------------------
         loggeer.info('==========开始执行测试用例' + self.case_id + '===========')
@@ -263,5 +263,3 @@ class Testcase(Page):
 
 if __name__ == '__main__':
     p = Testcase()
-    t = p.log('a_login', 'test1_Login_06', 'no', 'no')
-    print t

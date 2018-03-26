@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
-'''实现功能：
+"""
+实现功能：
 支持自由配置,如下log.conf,
 1）可以配置日志文件路径(log_file)；
 2）按日志数量配置(backup_count)及单个日志文件的大小(max_bytes_each）,自动化循环切换日志文件；
@@ -10,7 +11,7 @@
 5) 支持控制台日志级别自定义(log_level_in_console)
 6）支持文件日志级别自定义(log_level_in_logfile)
 7) 支持控制台和文件日志的各自的开启和关闭(分别为console_log_on, logfile_log_on)
-'''
+"""
 import logging
 import os
 import time

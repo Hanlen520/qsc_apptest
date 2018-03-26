@@ -1,35 +1,38 @@
 # __author__ = 'zzy'
-#-*-coding:utf-8-*-
+#-*- coding:utf-8 -*-
 from lxml import etree
 from xlutils.copy import copy
 from selenium.webdriver.common.by import By
 from appium.webdriver.common.touch_action import TouchAction
 # from PIL import Image
 from fractions import Fraction
-import sys,os,time
+import sys,importlib,os,time
 import xlrd
 import logging
 import math
 import operator
 import MySQLdb
-reload(sys)
-sys.setdefaultencoding('utf-8')
-'''
+try:
+    reload(sys)
+    sys.setdefaultencoding('utf-8')
+except ImportError:
+    importlib.reload(sys)
+"""
 ============说明================
 功能:页面基础类,包含所有页面公用的函数
 ================================
-'''
+"""
 
 class Page(object):
-    '''
+    """
     页面基础类，用于所有页面的继承
-    '''
+    """
     def __init__(self,appium_driver = None,parent =None):
 
         self.driver = appium_driver
         self.timeout = 30
         self.parent = parent
-        self.path = os.path.dirname(__file__)
+        self.path = os.path.dirname(sys.path[0])
         self.log_txt = self.path.split('test_case')[0] + 'data/log.txt'   #配置日志文件位置
         self.f_xml = self.path.split('test_case')[0] + 'data/element.xml' #配置xml文件位置
         # self.f_xls = self.path.split('test_case')[0] + 'data/TestCase.xls'#配置xls文件位置
@@ -38,7 +41,7 @@ class Page(object):
         self.img_path = self.path.split('test_case')[0] + 'report/image/image.txt'#配置上传图片路径
         self.open_xml = etree.parse(self.f_xml)                             #将xml解析为树结构
         # self.open_xls = xlrd.open_workbook(self.f_xls, formatting_info=True)#打开xls文件
-        self.host = '172.16.10.83'
+        self.host = '127.0.0.1'
         self.database = 'myweb'
         self.username = 'root'
         self.password = '12345678'
@@ -90,7 +93,7 @@ class Page(object):
                         return None
                 else:
                     element = self.find_element(By.ID,elementdict['pathvalue'])
-                    # print element
+                    # print(e)lement
                     if element:
                         logging.info('id定位成功')
                         return element
@@ -129,9 +132,9 @@ class Page(object):
                     logging.info('coordinate定位成功')
                     return elementdict
 
-        except Exception,e:
+        except Exception as e:
             logging.error('元素定位失败')
-            print e
+            print(e)
             return None
 
     # 判断activity函数
@@ -154,8 +157,8 @@ class Page(object):
                 action.tap(x=x, y=y)
             action.perform()
             return True
-        except BaseException,e:
-            print e
+        except BaseException as e:
+            print(e)
             return False
 
     def my_swipe2(self,start_x, start_y, end_x, end_y, duration=200):
@@ -163,8 +166,8 @@ class Page(object):
         try:
             self.driver.swipe(start_x, start_y, end_x, end_y, duration)
             return True
-        except BaseException,e:
-            print e
+        except BaseException as e:
+            print(e)
             return False
 
     def my_swipe(self,direction,value,during=200):
@@ -183,32 +186,32 @@ class Page(object):
             try:
                 self.driver.swipe(width / 2, height * 3 / 4, width / 2, height * i.numerator / i.denominator, during)
                 return True
-            except Exception,e:
-                print e
+            except Exception as e:
+                print(e)
                 return False
         elif direction == 'up':
             i = Fraction(value)
             try:
                 self.driver.swipe(width / 2, height / 4 , width / 2, height * i.numerator / i.denominator, during)
                 return True
-            except Exception, e:
-                print e
+            except Exception as e:
+                print(e)
                 return False
         elif direction == 'right':
             i = Fraction(1,4) + Fraction(value)
             try:
                 self.driver.swipe(width / 4, height / 2, width * i.numerator / i.denominator , height / 2, during)
                 return True
-            except Exception, e:
-                print e
+            except Exception as e:
+                print(e)
                 return False
         elif direction == 'left':
             i = (Fraction(3,4) - Fraction(value))
             try:
                 self.driver.swipe(width * 3 / 4, height / 2, width * i.numerator / i.denominator, height / 2, during)
                 return True
-            except Exception, e:
-                print e
+            except Exception as e:
+                print(e)
                 return False
         else:
             return False
@@ -259,7 +262,7 @@ class Page(object):
         conn.set_character_set('utf8')
         with conn:
             cur = conn.cursor(MySQLdb.cursors.DictCursor)
-            sql = '''select * from %s''' % table
+            sql = """select * from %s""" % table
             cur.execute(sql)
             testcases_list = cur.fetchall()
             return testcases_list
@@ -283,13 +286,13 @@ class Page(object):
                     for element_parent in activity_parents:
                         # 遍历主父节点中的element子节点
                         if element_parent.get('name') == element_name:
-                            # print element_name
-                            # print element_parent.tag,element_parent.get('name')
+                            # print(e)lement_name
+                            # print(e)lement_parent.tag,element_parent.get('name')
                             # print '查找到父节点'
                             for element_child in element_parent:
                                 # 获取element子节点中的value
                                 if isinstance(element_child.tag, str):
-                                    # print element_child.tag,":",element_child.text
+                                    # print(e)lement_child.tag,":",element_child.text
                                     # 将获取的value添加至elementdict字典中
                                     elementdict[element_child.tag] = element_child.text
                             logging.info('获取activity:'+ activity_name + ',element_name:' + element_name + ',元素信息:')
@@ -417,14 +420,14 @@ class Page(object):
         with conn:
             cur = conn.cursor(MySQLdb.cursors.DictCursor)
             if col == 'results':
-                sql = '''UPDATE %s SET result = '%s' WHERE case_id = '%s';''' %(table,value,case_id)
+                sql = "UPDATE %s SET result = '%s' WHERE case_id = '%s';" % (table, value, case_id)
             if col == 'actual':
-                sql = '''UPDATE %s SET actual = '%s' WHERE case_id = '%s';''' %(table,value,case_id)
+                sql = "UPDATE %s SET actual = '%s' WHERE case_id = '%s';" % (table, value, case_id)
             try:
                 cur.execute(sql)
                 return True
-            except BaseException,e:
-                print e
+            except BaseException as e:
+                print(e)
                 return False
 
 
@@ -444,4 +447,4 @@ if __name__ == '__main__':
     #     print u'写入结果失败'
     # logging.info('写入结果失败')
     t = p.set_mysql('a_login','test1_Login_06','actual','yes')
-    print t
+    print(t)

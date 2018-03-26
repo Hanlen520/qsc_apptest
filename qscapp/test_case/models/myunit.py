@@ -1,10 +1,9 @@
 # __author__ = 'zhangzhiyuan'
 #-*-coding:utf-8-*-
 from selenium import webdriver
-from driver import app_genymotion
-import driver
-from connect_devices import devices
-from appium_server import Appium_server
+from .driver import app_genymotion
+from .connect_devices import devices
+from .appium_server import Appium_server
 import unittest
 import logging
 import sys
@@ -42,12 +41,12 @@ class MyTest(unittest.TestCase):
         try:
             cls.driver.quit()
             logging.info('app退出成功!')
-        except BaseException,e:
+        except BaseException as e:
             logging.error('app退出失败!' + str(e))
 
         try:
             cls.APPIUM.stop_appium()
-        except BaseException,e:
+        except BaseException as e:
             logging.error('appium_server 停止失败！' + str(e))
 
 if __name__ == '__main__':

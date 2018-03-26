@@ -1,5 +1,5 @@
 # __author__ = 'zhangzhiyuan'
-# -*-coding:utf-8-*-
+# -*- coding:utf-8 -*-
 
 from appium import webdriver
 from configobj import ConfigObj
@@ -9,30 +9,29 @@ import os
 import logging
 import MySQLdb
 
-'''
+"""
 ============说明==============
 功能:app驱动文件
 入口:驱动配置文件data/config.ini
 =============================
-'''
+"""
 
 #driver驱动启动,返回driver
 def app_genymotion():
     #读取配置驱动配置文件
-    f_ini = os.path.dirname(__file__).split('test_case')[0] + 'data/config.ini'
+    f_ini = os.path.dirname(os.path[0]).split('test_case')[0] + 'data/config.ini'
     # readconfig = ConfigObj(f_ini)
     config = ConfigParser.ConfigParser()
     # config.readfp(open(f_ini))
     config.read(f_ini)
 
-    desired_caps = {}
-    desired_caps['platformName'] = config.get('APPCONFIG','platformName')
-    desired_caps['platformVersion'] = config.get('APPCONFIG','platformVersion')
-    desired_caps['deviceName'] = config.get('APPCONFIG','deviceName')
-    desired_caps['appPackage'] = config.get('APPCONFIG','appPackage')
-    desired_caps['appActivity'] = config.get('APPCONFIG','appActivity')
-    desired_caps['unicodeKeyboard'] = config.get('APPCONFIG','unicodeKeyboard')
-    desired_caps['resetKeyboard'] = config.get('APPCONFIG','resetKeyboard')
+    desired_caps = {'platformName': config.get('APPCONFIG', 'platformName'),
+                    'platformVersion': config.get('APPCONFIG', 'platformVersion'),
+                    'deviceName': config.get('APPCONFIG', 'deviceName'),
+                    'appPackage': config.get('APPCONFIG', 'appPackage'),
+                    'appActivity': config.get('APPCONFIG', 'appActivity'),
+                    'unicodeKeyboard': config.get('APPCONFIG', 'unicodeKeyboard'),
+                    'resetKeyboard': config.get('APPCONFIG', 'resetKeyboard')}
     # desired_caps['udid'] = config.get('APPCONFIG','udid')
     appium_port = config.get('APPCONFIG','appium_port')
 
@@ -40,7 +39,7 @@ def app_genymotion():
         driver = webdriver.Remote('http://127.0.0.1:'+appium_port+'/wd/hub', desired_caps)
         logging.info('app启动成功!')
         return driver
-    except BaseException,e:
+    except BaseException as e:
         logging.error('app启动失败!' + str(e))
         print e
         return None

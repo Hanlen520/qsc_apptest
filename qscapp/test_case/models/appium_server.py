@@ -7,16 +7,18 @@ import ConfigParser
 import subprocess
 import commands
 import logging
+import sys
+
 
 class Appium_server(object):
 
 	def __init__(self):
 		config = ConfigParser.ConfigParser()
-		config.read(os.path.dirname(__file__).split('test_case')[0] + 'data/config.ini')
+		config.read(os.path.dirname(sys.path[0]).split('test_case')[0] + 'data/config.ini')
 		self.appium_port = config.get('APPCONFIG','appium_port')
 		self.bp_port = config.get('APPCONFIG','bp_port')
 		self.udid = config.get('APPCONFIG','udid')
-		self.appium_log = os.path.dirname(__file__).split('test_case')[0] + 'data/appium_log.txt'
+		self.appium_log = os.path.dirname(sys.path[0]).split('test_case')[0] + 'data/appium_log.txt'
 
 	def start_appium(self):
 		cmd = 'appium -a 127.0.0.1 -p %s -bp %s -U %s>%s' %(self.appium_port,self.bp_port,self.udid,self.appium_log)
