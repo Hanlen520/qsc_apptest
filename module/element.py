@@ -23,7 +23,7 @@ except ImportError:
 ================================
 """
 
-class Page(object):
+class Eelemet(object):
     """
     页面基础类，用于所有页面的继承
     """
@@ -235,7 +235,8 @@ class Page(object):
             logging.error(u'获取截图失败:')
 
     # 图片对比函数
-    def similarity_image(self,file_name1, file_name2,standard = 1):
+    @staticmethod
+    def similarity_image(file_name1, file_name2, standard = 1):
 
         image1 = Image.open(file_name1)
         image2 = Image.open(file_name2)
