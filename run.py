@@ -1,8 +1,7 @@
 # __author__ = 'zhagnzhiyuan'
 #-*-coding:utf-8-*-
 import sys
-sys.path.append('./package')
-from HTMLTestRunner import HTMLTestRunner
+from qsc_apptest.package.HTMLTestRunner_cn import HTMLTestRunner
 from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
 from email.mime.multipart import MIMEMultipart
@@ -29,15 +28,14 @@ mail_user="********"
 mail_pass="********"
 #===========================发送邮件============================
 def send_mail(to_list,file_new,attach_list):
-    '''''
+    """
     to_list:发给谁
     sub:主题
     content:内容
     send_mail("aaa@126.com","sub","content")
-    '''
-    f = open(file_new, 'rb')
-    mail_body = f.read()
-    f.close()
+    """
+    with open(file_new, 'rb') as file:
+        mail_body = file.read()
     me=mail_user
     text = MIMEText(mail_body,'html','utf-8')
     msg = MIMEMultipart()
@@ -59,14 +57,15 @@ def send_mail(to_list,file_new,attach_list):
     msg['Subject'] = u'轻松筹Android自动化测试报告'
     msg['From'] = me
     msg['To'] = ";".join(to_list)
+
     try:
         s = smtplib.SMTP_SSL(mail_host, mail_port)
         s.login(mail_user,mail_pass)
         s.sendmail(me, to_list, msg.as_string())
         s.close()
         return True
-    except Exception, e:
-        print str(e)
+    except Exception as e:
+        print(e)
         return False
 
 #==============查找测试报告目录，找到最新生成的测试报告文件==========
@@ -79,14 +78,14 @@ def new_report(testreport):
 
 if __name__ == '__main__':
     #获取config.ini文件位置
-    f_ini  = os.path.dirname(__file__) + 'qscapp/data/config.ini'
+    f_ini  = os.path.dirname(__file__) + '/config/config.ini'
     #实例化配置文件
     config = ConfigParser.ConfigParser()
     config.read(f_ini)
     #获取设备名称
     name = sys.argv[2]
     #写入config.ini文件中
-    config.set('APPCONFIG','name',unicode(name))
+    config.set('APPCONFIG','name',name)
     with open(f_ini,"w+") as f:
         config.write(f)
 
@@ -100,16 +99,16 @@ if __name__ == '__main__':
     runner = HTMLTestRunner(stream=fp,
                             title=u'轻松筹Android自动化测试报告',
                           description=u'环境 ：Android 版本：5.1.1')
-    discover = unittest.defaultTestLoader.discover('./qscapp/test_case',
+    discover = unittest.defaultTestLoader.discover('./test_case',
                                                    pattern=testcase)
     # suite = unittest.TestSuite
     # suite.addTest()
 
     runner.run(discover)
     fp.close()
-    file_path = new_report('./qscapp/report/html/')
+    file_path = new_report('./data/report/html/')
     image_list = []
-    with open('./qscapp/report/image/image.txt','r+') as f:
+    with open('./data/report/image/image.txt','r+') as f:
         for each in f.readlines():
             image_list.append(each.split('\n')[0])
         f.seek(0)
@@ -123,8 +122,8 @@ if __name__ == '__main__':
     if p in a or q in a:
         print('we need to send E-mail.')
         if send_mail(mailto_list, file_path,image_list):
-            print u"发送成功"
+            print(u"发送成功")
         else:
-            print u"发送失败"
+            print(u"发送失败")
     else:
         print(u'测试通过不发送报告')
