@@ -2,12 +2,15 @@
 # -*- coding:utf-8 -*-
 
 from appium import webdriver
-from configobj import ConfigObj
-import ConfigParser
+from qsc_apptest.config.configure import Config
 import time
 import os
 import logging
-import MySQLdb
+import sys
+try:
+    import ConfigParser
+except ModuleNotFoundError:
+    from configparser import ConfigParser
 
 """
 ============说明==============
@@ -16,24 +19,16 @@ import MySQLdb
 =============================
 """
 
-#driver驱动启动,返回driver
-def app_genymotion():
-    #读取配置驱动配置文件
-    f_ini = os.path.dirname(os.path[0]).split('test_case')[0] + 'data/config.ini'
-    # readconfig = ConfigObj(f_ini)
-    config = ConfigParser.ConfigParser()
-    # config.readfp(open(f_ini))
-    config.read(f_ini)
-
-    desired_caps = {'platformName': config.get('APPCONFIG', 'platformName'),
-                    'platformVersion': config.get('APPCONFIG', 'platformVersion'),
-                    'deviceName': config.get('APPCONFIG', 'deviceName'),
-                    'appPackage': config.get('APPCONFIG', 'appPackage'),
-                    'appActivity': config.get('APPCONFIG', 'appActivity'),
-                    'unicodeKeyboard': config.get('APPCONFIG', 'unicodeKeyboard'),
-                    'resetKeyboard': config.get('APPCONFIG', 'resetKeyboard')}
-    # desired_caps['udid'] = config.get('APPCONFIG','udid')
-    appium_port = config.get('APPCONFIG','appium_port')
+def Driver():
+    config = Config().appConfig
+    desired_caps = {'platformName': config['platformName'],
+                    'platformVersion': config['platformVersion'],
+                    'deviceName': config.['deviceName'],
+                    'appPackage': config['appPackage'],
+                    'appActivity': config['appActivity'],
+                    'unicodeKeyboard': config['unicodeKeyboard'],
+                    'resetKeyboard': config['resetKeyboard']}
+    appium_port = config['appium_port']
 
     try:
         driver = webdriver.Remote('http://127.0.0.1:'+appium_port+'/wd/hub', desired_caps)
@@ -41,17 +36,10 @@ def app_genymotion():
         return driver
     except BaseException as e:
         logging.error('app启动失败!' + str(e))
-        print e
+        print(e)
         return None
 
 if __name__ == '__main__':
-    dr = app_genymotion()
-    try:
-        dr.find_element_by_android_uiautomator('new UiSelector().text("发现")').click()
-        dr.find_element_by_android_uiautomator('new UiSelector().text("小程序")').click()
-        dr.find_element_by_android_uiautomator('new UiSelector().text("美团外卖+")').click()
-        time.sleep(3)
-        dr.switch_to.context("WEBVIEW_com.tencent.mm:tools")
-    except:
-        dr.quit()
+    dr = Driver()
+
 
