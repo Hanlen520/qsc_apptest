@@ -6,6 +6,7 @@ from selenium.webdriver.common.by import By
 from appium.webdriver.common.touch_action import TouchAction
 # from PIL import Image
 from fractions import Fraction
+from qsc_apptest.config.configure import Config
 import sys,importlib,os,time
 import xlrd
 import logging
@@ -23,16 +24,22 @@ except ImportError:
 ================================
 """
 
-class Eelemet(object):
+class Eelement(object):
     """
     页面基础类，用于所有页面的继承
     """
     def __init__(self,appium_driver = None,parent =None):
-
+        config = Config()
         self.driver = appium_driver
         self.timeout = 30
         self.parent = parent
         self.path = os.path.dirname(sys.path[0])
+        self.log_txt = config.log_path   #配置日志文件位置
+        self.f_xml = config.xml_path #配置xml文件位置
+        self.f_xls = config.xls_path #配置xls文件位置
+        self.img_expected = config.imgExpected_path #配置预期截图文件位置
+        self.img_actual = config.imgActual_path #配置实际截图文件位置
+        self.img_path = config.img_path #配置上传图片路径
         self.log_txt = self.path.split('test_case')[0] + 'data/log.txt'   #配置日志文件位置
         self.f_xml = self.path.split('test_case')[0] + 'data/element.xml' #配置xml文件位置
         # self.f_xls = self.path.split('test_case')[0] + 'data/TestCase.xls'#配置xls文件位置
@@ -54,15 +61,15 @@ class Eelemet(object):
                             filename=self.log_txt,
                             filemode='w')
 
-        # console = logging.StreamHandler()
-        # console.setLevel(logging.INFO)
-        # # 设置日志打印格式
-        # formatter = logging.Formatter('%(name)-12s: %(levelname)-8s %(message)s')
-        # console.setFormatter(formatter)
-        # # 将定义好的console日志handler添加到root logger
-        # # self.logger.addHandler(console)
-        # logging.getLogger('zzy').addHandler(console)
-        # logging._removeHandlerRef(console)
+        console = logging.StreamHandler()
+        console.setLevel(logging.INFO)
+        # 设置日志打印格式
+        formatter = logging.Formatter('%(name)-12s: %(levelname)-8s %(message)s')
+        console.setFormatter(formatter)
+        # 将定义好的console日志handler添加到root logger
+        # self.logger.addHandler(console)
+        logging.getLogger('zzy').addHandler(console)
+        logging._removeHandlerRef(console)
 
     # 打开activity
     def start_appActivity(self,app_package,app_activity):

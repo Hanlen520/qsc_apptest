@@ -20,15 +20,15 @@ except ModuleNotFoundError:
 """
 
 def Driver():
-    config = Config().appConfig
-    desired_caps = {'platformName': config['platformName'],
-                    'platformVersion': config['platformVersion'],
-                    'deviceName': config.['deviceName'],
-                    'appPackage': config['appPackage'],
-                    'appActivity': config['appActivity'],
-                    'unicodeKeyboard': config['unicodeKeyboard'],
-                    'resetKeyboard': config['resetKeyboard']}
-    appium_port = config['appium_port']
+    config = Config()
+    desired_caps = {'platformName': config.platformName,
+                    'platformVersion': config.platformVersion,
+                    'deviceName': config.deviceName,
+                    'appPackage': config.appPackage,
+                    'appActivity': config.appActivity,
+                    'unicodeKeyboard': config.unicodeKeyboard,
+                    'resetKeyboard': config.resetKeyboard}
+    appium_port = config.appium_port
 
     try:
         driver = webdriver.Remote('http://127.0.0.1:'+appium_port+'/wd/hub', desired_caps)
