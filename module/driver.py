@@ -21,13 +21,13 @@ except ModuleNotFoundError:
 
 def Driver():
     config = Config()
-    desired_caps = {'platformName': config.platformName,
-                    'platformVersion': config.platformVersion,
-                    'deviceName': config.deviceName,
-                    'appPackage': config.appPackage,
-                    'appActivity': config.appActivity,
-                    'unicodeKeyboard': config.unicodeKeyboard,
-                    'resetKeyboard': config.resetKeyboard}
+    desired_caps = {'platformName': config.platform_name,
+                    'platformVersion': config.platform_version,
+                    'deviceName': config.device_name,
+                    'appPackage': config.app_package,
+                    'appActivity': config.app_activity,
+                    'unicodeKeyboard': config.unicodekey_board,
+                    'resetKeyboard': config.resetkey_board}
     appium_port = config.appium_port
 
     try:

@@ -1,5 +1,6 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
+from .common import Config
 try:
 	import commands
 except ModuleNotFoundError:
@@ -9,8 +10,6 @@ try:
 	import ConfigParser
 except ModuleNotFoundError:
 	import configparser as ConfigParser
-import os
-import MySQLdb
 
 """
 ================说明===================
@@ -18,30 +17,7 @@ import MySQLdb
 ======================================
 """
 def devices():
-	f_ini = os.path.dirname(sys.path[0]).split("test_case")[0] + "data/config.ini"
-	print(f_ini)
-	config = ConfigParser.ConfigParser()
-	config.read(f_ini)
-	# 获取设备名称（通过命令行传入到config.ini）
-	name = config.get("APPCONFIG","name")
-	conn = MySQLdb.connect(host="127.0.0.1", user="root",
-						   passwd="12345678", db="myweb", port=3306)
-	conn.set_character_set("utf8")
-	with conn:
-		cur = conn.cursor()
-		# 通过读取config.ini文件中的设备名称，执行sql命令，从数据库中获取对应设备型号和安卓版本
-		sql = 'select deviceName,platformVersion,appiumPort,bootstrapPort,udid,resolution from a_device where name = "{0}"'.format(name)
-		print(sql)
-	cur.execute(sql)
-	#获取设备型号、安卓版本、appium启动端口信息、设备udid
-	s = cur.fetchone()
-	print(s)
-	deviceName = s[0]
-	platformVersion = s[1]
-	appium_port = s[2]
-	bp_port = s[3]
-	udid = s[4]
-	resolution = s[5]
+
 	# 将数据库中获取的设备相关信息写入config.ini
 	config.set("APPCONFIG","appium_port",appium_port)
 	config.set("APPCONFIG","bp_port",bp_port)

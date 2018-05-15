@@ -1,9 +1,10 @@
 # __author__ = 'zhangzhiyuan'
 #-*-coding:utf-8-*-
+from .common import logger
 from selenium import webdriver
-from .driver import app_genymotion
+from .driver import Driver
 from .connect_devices import devices
-from .appium_server import Appium_server
+from .server import Appium_server
 import unittest
 import logging
 import sys
@@ -20,21 +21,21 @@ class MyTest(unittest.TestCase):
     def setUpClass(cls):
         #连接设备
         if devices():
-            logging.info('设备连接成功！')
+            logger.info('设备连接成功！')
             # 启动appium_server
             cls.APPIUM = Appium_server()
             cls.APPIUM.start_appium()
             time.sleep(2)
-            cls.driver = app_genymotion()
+            cls.driver = Driver()
             if cls.driver:
-                print 'appium连接成功！'
+                logger.info('appium连接成功')
                 cls.driver.implicitly_wait(15)
             else:
-                print 'appium连接失败'
+                logger.error('appium连接失败')
                 cls.APPIUM.stop_appium()
                 sys.exit()
         else:
-            print '连接设备失败'
+            logger.error('连接设备失败')
             sys.exit()
     @classmethod
     def tearDownClass(cls):
