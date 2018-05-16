@@ -1,6 +1,8 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
 from .common import Config
+from .common import ExecuteCMD
+from .common import logger
 try:
 	import commands
 except ModuleNotFoundError:
@@ -18,6 +20,9 @@ except ModuleNotFoundError:
 """
 def devices():
 
+
+	config = Config()
+	config.setConfig("APP","appium_port",appium_port)
 	# 将数据库中获取的设备相关信息写入config.ini
 	config.set("APPCONFIG","appium_port",appium_port)
 	config.set("APPCONFIG","bp_port",bp_port)
@@ -33,55 +38,40 @@ def devices():
 	if ":" in udid:
 		cmd = "adb connect %s" %udid
 		output = ExecuteCMD(cmd)
-		#Windows环境
-		# output = os.popen(cmd).read()
-		# print output
 		#查看设备连接信息
 		output2 = ExecuteCMD("adb devices")
-		# output2 = os.popen("adb devices").read()
-		# print output2
 		str1 = "connected to %s" %udid
 		str2 = "%s\tdevice" %udid
 		try:
 			if str1 in output:
 				if str2 in output2:
-					print("无线设备连接成功！")
+					logger("无线设备连接成功！")
 					return True
 				else:
-					print("{0}\n设备连接失败,尝试重新连接......".format(output2))
+					logger.info("{0}\n设备连接失败,尝试重新连接......".format(output2))
 					raise OSError
 			else:
-				print(output)
+				logger.info(output)
 				return False
 		except OSError:
 			ExecuteCMD("adb disconnect " + udid)
-			# os.popen("adb disconnect " + udid).read()
 			output = ExecuteCMD("adb connect " + udid)
-			# output = os.popen("adb connect " + udid).read()
 			output2 = ExecuteCMD("adb devices")
-			# output2 = os.popen("adb devices").read()
 			if str1 in output:
 				if  str2 in output2:
-					print ("设备连接成功！")
+					logger.info("设备连接成功！")
 					return True
 				else:
-					print(output2)
-					print("设备连接失败，请重启手机无线调试模式")
+					logger.error(output2)
+					logger.error("设备连接失败，请重启手机无线调试模式")
 					return False
 	elif "device" in ExecuteCMD("adb devices"): # os.popen("adb devices").read()
-		print("有线设备连接成功！")
+		logger.info("有线设备连接成功！")
 		return True
 	else:
-		print("udid格式不正确！")
+		logger.info("udid格式不正确！")
 		return False
 
-
-def ExecuteCMD(shell):
-	if sys.version_info >= (3,3):
-		result = subprocess.check_output(shell)
-	else:
-		result = commands.getoutput(shell)
-	return result
 
 if __name__ == "__main__":
 	devices()

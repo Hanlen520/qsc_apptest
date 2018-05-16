@@ -9,6 +9,8 @@ import xml.etree.ElementTree as etree
 from PIL import Image
 from qsc_apptest.config.configure import Config
 import pymysql
+import sqlite3
+import sys
 
 class Common(object):
 
@@ -21,6 +23,7 @@ class Common(object):
         self.img_expected = config.img_expected_path
         self.img_actual = config.img_actual_path
         self.img_path = config.img_path
+        self.db_type = config.db_type
         self.host = config.db_host
         self.database = config.db_database
         self.username = config.db_name
@@ -32,9 +35,16 @@ class Common(object):
         """
         :return: db_conn
         """
-        conn = pymysql.connect(host=self.host, user=self.username,
-                               passwd=self.password, db=self.database, port=self.port)
-        conn.set_character_set('utf8')
+        if self.db_type != "mysql" and self.db_type != "sqlite3":
+            logger.error("数据库类型错误：'mysql' or 'sqlite3'")
+            raise ConnectionAbortedError("数据库类型错误")
+        if self.db_type == "mysql":
+            conn = pymysql.connect(host=self.host, user=self.username,
+                               passwd=self.password, db=self.database, port=int(self.port))
+            # conn.set_character_set('utf8')
+        if self.db_type == "sqlite3":
+            conn = sqlite3.connect(self.database)
+
         return conn
 
     def __xlsConn(self):
@@ -114,7 +124,6 @@ class Common(object):
                 break
         return cell_dict
 
-    # 写入excel表格中result结果
     def setXls(self,sheet_index,row,col,value):
 
         open_xls = xlrd.open_workbook(self.f_xls, formatting_info=True)  # 打开xls文件
@@ -144,7 +153,6 @@ class Common(object):
             logger.error(e)
             return False
 
-    # 将测试结果写入excel表格中
     def SetResults(self,sheet_name,case_id,col,value):
         #获取sheet_index
         sheet_index = self.getXlsSheetIndex(sheet_name)
@@ -212,7 +220,7 @@ class Common(object):
         except Exception as e:
             logger.error('{0}:获取activity失败!'.format(e))
 
-    def GetDevices(self,name):
+    def GetDevices(self):
         config = Config()
         name = config.name
         conn = self.__dbConn()
@@ -232,7 +240,7 @@ class Common(object):
         udid = s[4]
         resolution = s[5]
 
-    def GetMysql(self, table):
+    def GetTestCaseListForMysql(self, table):
         """
         :param table:
         :return: mysq数据库中的测试用例
@@ -245,7 +253,7 @@ class Common(object):
             testCasesList = cur.fetchall()
             return testCasesList
 
-    def SetMysql(self,table,case_id,col,value):
+    def SetTestCaseForMysql(self,table,case_id,col,value):
         # 连接数据库
         conn = self.__dbConn()
         with conn:
@@ -261,6 +269,22 @@ class Common(object):
             except BaseException as e:
                 logger.error(e)
                 return False
+
+    def get_devices_mysql(self):
+        conn = self.__dbConn()
+        with conn:
+            cur = conn.cursor()
+        #通过读取config.ini文件中的设备名称，执行sql命令，从数据库中获取对应设备型号和安卓版本
+        sql = 'select deviceName,platformVersion,appiumPort,bootstrapPort,udid,resolution from a_device where name = "%s"' % name
+        cur.execute(sql)
+        #获取设备型号、安卓版本、appium启动端口信息、设备udid
+        s = cur.fetchone()
+        deviceName = s[0]
+        platformVersion = s[1]
+        appium_port = s[2]
+        bp_port = s[3]
+        udid = s[4]
+        resolution = s[5]
 
     @staticmethod
     def SimilarityImage(file_name1, file_name2, standard = 1):
@@ -279,13 +303,19 @@ class Common(object):
         else:
             return False
 
+def ExecuteCMD(shell):
+    if sys.version_info >= (3,3):
+        result = subprocess.check_output(shell)
+    else:
+        result = commands.getoutput(shell)
+    return result
 
 fileConfig(Common().config_path)
 logger = logging.getLogger('root')
 
 if __name__ == '__main__':
     c = Common()
-    c.GetMysql('a_devices')
+    c.GetDevices()
     logger.info("测试")
     logger.warning("这是警告")
     logger.debug("这是调试")

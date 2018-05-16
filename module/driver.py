@@ -26,8 +26,8 @@ def Driver():
                     'deviceName': config.device_name,
                     'appPackage': config.app_package,
                     'appActivity': config.app_activity,
-                    'unicodeKeyboard': config.unicodekey_board,
-                    'resetKeyboard': config.resetkey_board}
+                    'unicodeKeyboard': config.unicode_keyboard,
+                    'resetKeyboard': config.reset_keyboard}
     appium_port = config.appium_port
 
     try:
