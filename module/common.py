@@ -3,19 +3,22 @@ import xlrd
 import logging
 import math
 import operator
+import sys
+sys.path.append('/Users/zzy/python_work')
+reload(sys)
+sys.setdefaultencoding('utf-8')
 from logging.config import fileConfig
 from xlutils.copy import copy
 import xml.etree.ElementTree as etree
-from PIL import Image
+# from PIL import Image
 from qsc_apptest.config.configure import Config
 import pymysql
 import sqlite3
-import sys
+from qsc_apptest.config.sql import Create_Mysql_Device_SQL,Create_Sqlite_Device_SQL
 
 class Common(object):
 
     def __init__(self):
-
         config = Config()
         self.log_txt = config.log_path
         self.f_xml = config.xml_path
@@ -43,7 +46,7 @@ class Common(object):
                                passwd=self.password, db=self.database, port=int(self.port))
             # conn.set_character_set('utf8')
         if self.db_type == "sqlite3":
-            conn = sqlite3.connect(self.database)
+            conn = sqlite3.connect('../data/db/' + self.database)
 
         return conn
 
@@ -220,27 +223,36 @@ class Common(object):
         except Exception as e:
             logger.error('{0}:获取activity失败!'.format(e))
 
-    def GetDevices(self):
+    def GetDevices(self,name):
         config = Config()
-        name = config.name
         conn = self.__dbConn()
         with conn:
             cur = conn.cursor()
             # 通过读取config.ini文件中的设备名称，执行sql命令，从数据库中获取对应设备型号和安卓版本
-            sql = 'select deviceName,platformVersion,appiumPort,bootstrapPort,udid,resolution from a_device where name = "{0}"'.format(name)
-            print(sql)
-        cur.execute(sql)
+            sql = "select deviceName,platformVersion,appiumPort,bootstrapPort,uuid,resolution from device where name = '{0}'".format(name)
+            try:
+                cur.execute(sql)
+            except Exception as e:
+                if "doesn't exist" in str(e) or "no such table: device" in str(e):
+                    if config.db_type == "mysql":
+                        cur.execute(Create_Mysql_Device_SQL)
+                    else:
+                        cur.execute(Create_Sqlite_Device_SQL)
         #获取设备型号、安卓版本、appium启动端口信息、设备udid
         s = cur.fetchone()
-        print(s)
-        deviceName = s[0]
-        platformVersion = s[1]
-        appium_port = s[2]
-        bp_port = s[3]
-        udid = s[4]
-        resolution = s[5]
+        if s is not None:
+            device_info = {
+                'deviceName':s[0],
+                'platformVersion':s[1],
+                'appium_port':s[2],
+                'bp_port':s[3],
+                'uuid':s[4],
+                'resolution':s[5]
+            }
+            return device_info
+        return None
 
-    def GetTestCaseListForMysql(self, table):
+    def GetTestCase(self, table):
         """
         :param table:
         :return: mysq数据库中的测试用例
@@ -269,22 +281,6 @@ class Common(object):
             except BaseException as e:
                 logger.error(e)
                 return False
-
-    def get_devices_mysql(self):
-        conn = self.__dbConn()
-        with conn:
-            cur = conn.cursor()
-        #通过读取config.ini文件中的设备名称，执行sql命令，从数据库中获取对应设备型号和安卓版本
-        sql = 'select deviceName,platformVersion,appiumPort,bootstrapPort,udid,resolution from a_device where name = "%s"' % name
-        cur.execute(sql)
-        #获取设备型号、安卓版本、appium启动端口信息、设备udid
-        s = cur.fetchone()
-        deviceName = s[0]
-        platformVersion = s[1]
-        appium_port = s[2]
-        bp_port = s[3]
-        udid = s[4]
-        resolution = s[5]
 
     @staticmethod
     def SimilarityImage(file_name1, file_name2, standard = 1):
@@ -315,7 +311,7 @@ logger = logging.getLogger('root')
 
 if __name__ == '__main__':
     c = Common()
-    c.GetDevices()
+    print(c.GetDevices('kindle'))
     logger.info("测试")
     logger.warning("这是警告")
     logger.debug("这是调试")

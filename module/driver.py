@@ -19,25 +19,31 @@ except ModuleNotFoundError:
 =============================
 """
 
-def Driver():
-    config = Config()
-    desired_caps = {'platformName': config.platform_name,
-                    'platformVersion': config.platform_version,
-                    'deviceName': config.device_name,
-                    'appPackage': config.app_package,
-                    'appActivity': config.app_activity,
-                    'unicodeKeyboard': config.unicode_keyboard,
-                    'resetKeyboard': config.reset_keyboard}
-    appium_port = config.appium_port
+class Driver(object):
 
-    try:
-        driver = webdriver.Remote('http://127.0.0.1:'+appium_port+'/wd/hub', desired_caps)
-        logging.info('app启动成功!')
-        return driver
-    except BaseException as e:
-        logging.error('app启动失败!' + str(e))
-        print(e)
-        return None
+    def __init__(self,deviceInfo):
+        self.config = Config()
+        self.desired_caps = {'platformName': self.config.platform_name,
+                        'platformVersion': self.config.platform_version,
+                        'deviceName': self.config.device_name,
+                        'appPackage': self.config.app_package,
+                        'appActivity': self.config.app_activity,
+                        'unicodeKeyboard': self.config.unicode_keyboard,
+                        'resetKeyboard': self.config.reset_keyboard}
+        self.appium_port = self.config.appium_port
+        if deviceInfo is not None:
+            self.desired_caps['platformVersion'] = deviceInfo['platformVersion']
+            self.desired_caps['deviceName'] = deviceInfo['deviceName']
+
+    def connect(self):
+        try:
+            driver = webdriver.Remote('http://127.0.0.1:'+ self.appium_port +'/wd/hub', self.desired_caps)
+            logging.info('app启动成功!')
+            return driver
+        except BaseException as e:
+            logging.error('app启动失败!' + str(e))
+            print(e)
+            return None
 
 if __name__ == '__main__':
     dr = Driver()

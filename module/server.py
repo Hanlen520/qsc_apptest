@@ -11,11 +11,20 @@ import logging
 
 class Appium_server(object):
 
-	def __init__(self):
+	def __init__(self,appium_port = None,bp_port = None,uuid = None):
 		config = Config()
-		self.appium_port = config.appium_port
-		self.bp_port = config.bp_port
-		self.udid = config.udid
+		if appium_port is None:
+			self.appium_port = config.appium_port
+		else:
+			self.appium_port = appium_port
+		if bp_port is None:
+			self.bp_port = config.bp_port
+		else:
+			self.bp_port = bp_port
+		if uuid is None:
+			self.uuid = config.uuid
+		else:
+			self.uuid = uuid
 		self.appium_log = config.appium_log
 
 	def start_appium(self):
